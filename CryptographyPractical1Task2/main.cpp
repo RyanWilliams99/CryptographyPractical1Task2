@@ -1,17 +1,16 @@
-#include <ctype.h>      // For isalnum()
-#include <iostream>     // For console output
-#include <string>       // For std::string
-#include <vector>       // For std::vector
+#include <ctype.h>      
+#include <iostream>     
+#include <string>       
+#include <vector>    
+
 using namespace std;
 
 vector<char> split(const string& str)
 {
 	vector<char> result;
 
-	// For each character in the string
 	for (char ch : str)
 	{
-		// Copy only alphabetical characters and numeric digits
 		if (isalnum(ch))
 		{
 			result.push_back(ch);
@@ -106,19 +105,13 @@ int main()
 
 		if (validate(result))
 		{
-			cout << "Valid ISBN" << "\n" << "-------------------------------------------" << "\n";
+			cout << "Valid ISBN" << endl << endl;
 		}
 		else
 		{
-			cout << "Invalid ISBN" << "\n" << "-------------------------------------------" << "\n";
+			cout << "Invalid ISBN" << endl << endl;
 		}
 
-		/*cout << "{ ";
-		for (char ch : result)
-		{
-			cout << "'" << ch << "' ";
-		}
-		cout << "}" << endl;*/
 	}
 
 }
